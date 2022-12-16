@@ -1,25 +1,36 @@
-import logo from './logo.svg';
+import styled from 'styled-components'
 import './App.css';
+import Navbar from './components/Navbar';
+import Intro from './components/Intro';
+import Scroll from "./components/Scroll";
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+
+    const Title = styled.h1`
+          font-size: 1em;
+        `;
+
+
+    return (
+        <>
+        <header>
+            <Title> Lucas </Title>
+            <Navbar />
+            {/*<Weather />*/}
+        </header>
+        <Intro />
+        <section id="skills">
+            BLABLABLA
+        </section>
+        <section id="works">
+            BLABLABLA
+        </section>
+        <section id="contact">
+            BLABLABLA
+        </section>
+        <Scroll />
+        </>
+    );
 }
 
 export default App;

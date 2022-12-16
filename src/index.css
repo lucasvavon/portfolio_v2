@@ -1,13 +1,80 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@font-face {
+  font-family: "Inconsolata_regular";
+  src: url('./fonts/Inconsolata/static/Inconsolata/Inconsolata-Regular.ttf') format("truetype");
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+html {
+  scroll-behavior: smooth;
 }
+body {
+  margin: 0;
+  font-family: 'Inconsolata_regular', monospace;
+  font-size: xx-large;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  padding: 2% 10%;
+  background: rgb(24, 24, 24);
+  color: #fff9d8;
+  height: 100%;
+}
+
+@media (max-width: 767px){
+  body {
+    padding: 10% 10%;
+  }
+  #scroll_button {
+    transform: rotate(-0.25turn);
+    position: fixed;
+    bottom: 100px;
+    left: -15%;
+    z-index: 99;
+    font-size: 16px;
+    border: none;
+    outline: none;
+    background: unset;
+    color: #fff9d8;
+    cursor: pointer;
+  }
+}
+
+section {
+  height: 100vh;
+  padding: 10% 0;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  text-transform: capitalize;
+  padding-bottom: 10%;
+}
+
+a {
+  text-decoration: none;
+  color: #fff9d8;
+}
+
+.menu_option:hover {
+  text-decoration: none;
+  transform: scale(1.05);
+}
+
+#clock {
+  font-size: 20px;
+}
+@media (min-width: 768px){
+  #scroll_button {
+    transform: rotate(-0.25turn);
+    position: fixed;
+    bottom: 100px;
+    left: 18px;
+    z-index: 99;
+    font-size: 16px;
+    border: none;
+    outline: none;
+    background: unset;
+    color: #fff9d8;
+    cursor: pointer;
+  }
+}
+
