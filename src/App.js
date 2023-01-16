@@ -3,6 +3,9 @@ import './App.css';
 import Navbar from './components/Navbar';
 import Intro from './components/Intro';
 import Scroll from "./components/Scroll";
+import Skills from "./components/Skills";
+import Works from "./components/Works";
+import Contact from "./components/Contact";
 
 function App() {
 
@@ -10,25 +13,16 @@ function App() {
           font-size: 1em;
         `;
 
-
     return (
         <>
         <header>
             <Title> Lucas </Title>
             <Navbar />
-            {/*<Weather />*/}
         </header>
-        <Intro />
-        <section id="skills">
-            BLABLABLA
-        </section>
-        <section id="works">
-            BLABLABLA
-        </section>
-        <section id="contact">
-            BLABLABLA
-        </section>
-        <Scroll />
+            <div id={"container"}>
+                <Intro /><Skills /><Works /><Contact /><Scroll />
+            </div>
+
         </>
     );
 }

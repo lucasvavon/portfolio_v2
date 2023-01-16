@@ -1,6 +1,6 @@
 @font-face {
-  font-family: "Inconsolata_regular";
-  src: url('./fonts/Inconsolata/static/Inconsolata/Inconsolata-Regular.ttf') format("truetype");
+  font-family: "Syne";
+  src: url('./fonts/Syne/static/Syne-Regular.ttf') format("truetype");
 }
 
 html {
@@ -8,34 +8,17 @@ html {
 }
 body {
   margin: 0;
-  font-family: 'Inconsolata_regular', monospace;
+  font-family: 'Syne', monospace;
   font-size: xx-large;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   padding: 2% 10%;
-  background: rgb(24, 24, 24);
-  color: #fff9d8;
+  background: white;
+  color: #005228;
   height: 100%;
 }
 
-@media (max-width: 767px){
-  body {
-    padding: 10% 10%;
-  }
-  #scroll_button {
-    transform: rotate(-0.25turn);
-    position: fixed;
-    bottom: 100px;
-    left: -15%;
-    z-index: 99;
-    font-size: 16px;
-    border: none;
-    outline: none;
-    background: unset;
-    color: #fff9d8;
-    cursor: pointer;
-  }
-}
+
 
 section {
   height: 100vh;
@@ -51,7 +34,7 @@ header {
 
 a {
   text-decoration: none;
-  color: #fff9d8;
+  color: #005228;
 }
 
 .menu_option:hover {
@@ -67,13 +50,31 @@ a {
     transform: rotate(-0.25turn);
     position: fixed;
     bottom: 100px;
-    left: 18px;
+    right: 18px;
     z-index: 99;
     font-size: 16px;
     border: none;
     outline: none;
     background: unset;
-    color: #fff9d8;
+    color: #005228;
+    cursor: pointer;
+  }
+}
+@media (max-width: 767px){
+  body {
+    padding: 10% 10%;
+  }
+  #scroll_button {
+    transform: rotate(-0.25turn);
+    position: fixed;
+    bottom: 100px;
+    right: -14%;
+    z-index: 99;
+    font-size: 16px;
+    border: none;
+    outline: none;
+    background: unset;
+    color: #005228;
     cursor: pointer;
   }
 }
