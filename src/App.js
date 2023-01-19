@@ -6,23 +6,31 @@ import Scroll from "./components/Scroll";
 import Skills from "./components/Skills";
 import Works from "./components/Works";
 import Contact from "./components/Contact";
+import Logo from './components/Logo.js'
 
 function App() {
 
-    const Title = styled.h1`
-          font-size: 1em;
+    const Title = styled.div`
+      font-size: 1em;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between;
         `;
 
     return (
         <>
         <header>
-            <Title> Lucas </Title>
+            <div className={"title"}>
+                <Logo />
+                <Title><div>Lucas</div></Title>
+            </div>
+
             <Navbar />
         </header>
             <div id={"container"}>
                 <Intro /><Skills /><Works /><Contact /><Scroll />
             </div>
-
         </>
     );
 }
