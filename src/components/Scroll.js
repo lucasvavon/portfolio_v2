@@ -1,6 +1,6 @@
 import {useState} from "react";
 
-function Scroll() {
+const Scroll = () => {
 
     const [visible, setVisible] = useState(false)
 

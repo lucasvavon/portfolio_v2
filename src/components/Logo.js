@@ -1,6 +1,6 @@
-import me from './../me.jpg';
+import me from '../images/me.jpg';
 
-function Logo() {
+const Logo = () => {
     return (
         <div className={"logo"}>
             <img className={"me"} src={me} alt="logo" />

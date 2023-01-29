@@ -1,5 +1,5 @@
 
-function Works() {
+const Works = () => {
     return (
         <section id="works">
             Je travaille dans une agence de développement web.<br/>

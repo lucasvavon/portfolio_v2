@@ -3,10 +3,11 @@ import './App.css';
 import Navbar from './components/Navbar';
 import Intro from './components/Intro';
 import Scroll from "./components/Scroll";
-import Skills from "./components/Skills";
+import Skills from "./components/About";
 import Works from "./components/Works";
 import Contact from "./components/Contact";
 import Logo from './components/Logo.js'
+import Links from "./components/Links";
 
 function App() {
 
@@ -20,17 +21,18 @@ function App() {
 
     return (
         <>
-        <header>
-            <div className={"title"}>
-                <Logo />
-                <Title><div>Lucas</div></Title>
-            </div>
+            <header>
+                <div className={"title"}>
+                    <Logo />
+                    <Title><div>Lucas</div></Title>
+                </div>
 
-            <Navbar />
-        </header>
-            <div id={"container"}>
-                <Intro /><Skills /><Works /><Contact /><Scroll />
-            </div>
+                <Navbar />
+            </header>
+            <main id={"container"}>
+                <Intro />
+                <Skills /><Works /><Contact /><Scroll />
+            </main>
         </>
     );
 }

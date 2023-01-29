@@ -3,7 +3,7 @@ import axios from "axios";
 import '../styles/Weather.css';
 import Time from "./Time";
 
- function Weather() {
+const Weather = () => {
 
     const [lat, setLat] = useState(null);
     const [lng, setLng] = useState(null);
