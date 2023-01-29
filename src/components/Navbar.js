@@ -8,7 +8,7 @@ function Navbar() {
         "width": '40%',
         "display": 'flex',
         "flex-flow": 'row',
-        "justify-content": 'space-evenly',
+        "justify-content": 'space-between',
         "align-items": 'center'
     };
     const menuMobileStyle= {
@@ -27,19 +27,6 @@ function Navbar() {
                 <a className={"menu_option"} href={"#works"}>Works</a>
                 <a className={"menu_option"} href={"#contact"}>Contact</a>
             </nav>
-            <div id="menuToggle">
-                <input type="checkbox" />
-                <span></span>
-                <span></span>
-                <span></span>
-                <ul id="menu">
-                    <a href="#"><li>Home</li></a>
-                    <a href="#"><li>About</li></a>
-                    <a href="#"><li>Info</li></a>
-                    <a href="#"><li>Contact</li></a>
-                    <a href="https://erikterwan.com/" target="_blank"><li>Show me more</li></a>
-                </ul>
-            </div>
         </>
     );
 }

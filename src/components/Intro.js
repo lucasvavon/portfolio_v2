@@ -1,17 +1,18 @@
 import styled from "styled-components";
 import Typewriter from 'typewriter-effect';
+import Logo from "./Logo";
 
 const Intro = () => {
     const Div = styled.div
         `
             display: flex;
-            justify-content: space-between;
             font-size: 45px;
         `;
 
     return (
         <section>
                 <Div>
+                    <Logo />
 
                     <Typewriter
                         options={{

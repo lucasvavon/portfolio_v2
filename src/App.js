@@ -7,23 +7,15 @@ import Skills from "./components/About";
 import Works from "./components/Works";
 import Contact from "./components/Contact";
 import Logo from './components/Logo.js'
+import {Title} from './styles/styles';
 import Links from "./components/Links";
 
 function App() {
-
-    const Title = styled.div`
-      font-size: 1em;
-      display: flex;
-      flex-direction: row;
-      align-items: center;
-      justify-content: space-between;
-        `;
 
     return (
         <>
             <header>
                 <div className={"title"}>
-                    <Logo />
                     <Title><div>Lucas</div></Title>
                 </div>
 
@@ -31,7 +23,11 @@ function App() {
             </header>
             <main id={"container"}>
                 <Intro />
-                <Skills /><Works /><Contact /><Scroll />
+                <Skills />
+                <Works />
+                <Contact />
+                <Scroll />
+                <Links />
             </main>
         </>
     );
