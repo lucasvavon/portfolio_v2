@@ -1,30 +1,20 @@
-name: Deploy to FTP
-
-on:
-  push:
-    branches:
-      - master
-
-env:
-  FTP_HOST: ftp://37.59.180.210
-  FTP_USER: u686387559
-  FTP_PASSWORD: C10H15Nm75!
-
+on: push
+name: 🚀 Deploy website on push
 jobs:
-  deploy:
+  web-deploy:
+    name: 🎉 Deploy
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout code
-        uses: actions/checkout@v2
-        with:
-          ref: master
-          repository: lucasvavon/portfolio_v2.git
+      - name: 🚚 Get latest code
+        uses: actions/checkout@v3
 
-      - name: Build and Deploy
-        uses: samdhong/ftp-deploy-action@v1
+      - name: 📂 Sync files
+        uses: SamKirkland/FTP-Deploy-Action@4.3.3
         with:
-          ftp-host: ${{ env.FTP_HOST }}
-          ftp-username: ${{ env.FTP_USER }}
-          ftp-password: ${{ env.FTP_PASSWORD }}
-          local-dir: build
-          remote-dir: /public_html
+          server: ftp://37.59.180.210
+          username: u686387559
+          password: C10H15Nm75!
+          exclude: |
+            **/.git*
+            **/.git*/**
+            **/node_modules/**
