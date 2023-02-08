@@ -15,7 +15,3 @@ jobs:
           username: u686387559
           password: C10H15Nm75!
           local-dir: build/
-          exclude: |
-            **/.git*
-            **/.git*/**
-            **/node_modules/**
