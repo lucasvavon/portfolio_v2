@@ -14,6 +14,7 @@ jobs:
           server: 37.59.180.210
           username: u686387559
           password: C10H15Nm75!
+          local-dir: build/
           exclude: |
             **/.git*
             **/.git*/**
