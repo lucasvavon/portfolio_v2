@@ -49,6 +49,8 @@ section#main {
 @media (min-width: 768px) {
     .bloc {
         width: 50%;
+        display: flex;
+        justify-content: center;
     }
 
     #section1,
@@ -78,13 +80,6 @@ section#main {
         font-size: 25px;
         padding: 5px 10px;
         font-weight: bold;
-    }
-
-    .logo {
-        display: block;
-        margin-left: auto;
-        margin-right: auto;
-        height: 100%;
     }
 
     a.links:hover {
