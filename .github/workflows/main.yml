@@ -12,17 +12,17 @@ env:
 
 jobs:
   deploy:
-    runs-on: ubuntu-latest
+      name: 🚀Deploy website every commit
+      runs-on: ubuntu-latest
+      steps:
+        - name: 🚚Get latest code
+          uses: actions/checkout@v3
 
-    steps:
-    - name: Checkout code
-      uses: actions/checkout@v2
-
-    - name: Build and Deploy
-      uses: samdhong/ftp-deploy-action@v1
-      with:
-        ftp-host: ${{ env.FTP_HOST }}
-        ftp-username: ${{ env.FTP_USER }}
-        ftp-password: ${{ env.FTP_PASSWORD }}
-        local-dir: build
-        remote-dir: /public_html
+        - name: 📂Sync files
+          uses: ./
+          with:
+            ftp-host: ${{ env.FTP_HOST }}
+            ftp-username: ${{ env.FTP_USER }}
+            ftp-password: ${{ env.FTP_PASSWORD }}
+            local-dir: build
+            remote-dir: /public_html
