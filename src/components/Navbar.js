@@ -1,34 +1,38 @@
-import { useMediaQuery } from "react-responsive";
+import { useRef } from 'react';
 
-function Navbar() {
-
-    const isDesktopOrLaptop = useMediaQuery({ query: '(min-width: 768px)' })
-
-    const menuDesktopStyle = {
-        "width": '40%',
-        "display": 'flex',
-        "flex-flow": 'row',
-        "justify-content": 'space-between',
-        "align-items": 'center'
-    };
-    const menuMobileStyle= {
-        "display": 'flex',
-        "flex-flow": 'column',
-        "text-align": 'right',
-        "justify-content": 'space-between'
+const Navbar = () => {
+    const handleClick = (e) => {
+        console.log(e.target.id);
     };
 
     return (
-        <>
-            <nav
-                id={isDesktopOrLaptop ? "desktop_nav" : "mobile_nav"}
-                style={isDesktopOrLaptop ? menuDesktopStyle : menuMobileStyle}>
-                <a className={"menu_option"} href={"#about"}>About</a>
-                <a className={"menu_option"} href={"#works"}>Works</a>
-                <a className={"menu_option"} href={"#contact"}>Contact</a>
-            </nav>
-        </>
+        <nav className={'navbar'}>
+            <input type="radio" className={'toggle'} id="toggle1" />
+            <label htmlFor={'toggle1'} className={'button-nav'}>
+                About.
+            </label>
+
+            <input
+                type="radio"
+                className={'toggle'}
+                id="toggle2"
+                onClick={handleClick}
+            />
+            <label htmlFor={'toggle2'} className={'button-nav'}>
+                Works.
+            </label>
+
+            <input
+                type="radio"
+                className={'toggle'}
+                id="toggle3"
+                onClick={handleClick}
+            />
+            <label htmlFor={'toggle3'} className={'button-nav'}>
+                Contact.
+            </label>
+        </nav>
     );
-}
+};
 
 export default Navbar;

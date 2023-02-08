@@ -1,30 +1,19 @@
-import styled from "styled-components";
-import Typewriter from 'typewriter-effect';
-import Logo from "./Logo";
+import Links from './Links';
+import Navbar from './Navbar';
 
 const Intro = () => {
-    const Div = styled.div
-        `
-            display: flex;
-            font-size: 45px;
-        `;
-
     return (
-        <section>
-                <Div>
-                    <Logo />
-
-                    <Typewriter
-                        options={{
-                            strings: ['Bonjour,<br/>Je suis Lucas,<br/>developpeur web.'],
-                            autoStart: true,
-                            loop: true,
-                            pauseFor: 1500
-                        }}
-                    />
-                </Div>
+        <section id={'section1'} className={'bloc'}>
+            <div className={'intro-container'}>
+                <div className={'text-intro'}>
+                    <h1>Hello. I'm Lucas.</h1>
+                    <h3>Web developer based in France.</h3>
+                    <Links />
+                </div>
+            </div>
+            <Navbar />
         </section>
-    )
-}
+    );
+};
 
-export default Intro
+export default Intro;
