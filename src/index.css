@@ -48,7 +48,7 @@ section#main {
 
 @media (min-width: 768px) {
     .bloc {
-        width: 50%;
+        width: 40%;
         display: flex;
         justify-content: center;
     }

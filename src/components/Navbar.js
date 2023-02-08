@@ -9,7 +9,7 @@ const Navbar = () => {
         <nav className={'navbar'}>
             <input type="radio" className={'toggle'} id="toggle1" />
             <label htmlFor={'toggle1'} className={'button-nav'}>
-                About.
+                About
             </label>
 
             <input
@@ -19,7 +19,7 @@ const Navbar = () => {
                 onClick={handleClick}
             />
             <label htmlFor={'toggle2'} className={'button-nav'}>
-                Works.
+                Works
             </label>
 
             <input
@@ -29,7 +29,7 @@ const Navbar = () => {
                 onClick={handleClick}
             />
             <label htmlFor={'toggle3'} className={'button-nav'}>
-                Contact.
+                Contact
             </label>
         </nav>
     );

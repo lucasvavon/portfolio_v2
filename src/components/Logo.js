@@ -1,8 +1,10 @@
 import logo from "../images/me-min.png"
+
 const Logo = () => {
+
     return (
         <div className={'bloc'}>
-            <img className={'logo'} src={logo} alt={"logo"}/>
+            <img loading="lazy" className={'logo'} src={logo} alt={"logo"}/>
         </div>
     );
 };
