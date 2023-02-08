@@ -11,7 +11,7 @@ jobs:
       - name: 📂 Sync files
         uses: SamKirkland/FTP-Deploy-Action@4.3.3
         with:
-          server: ftp://37.59.180.210
+          server: ftp.lcs-vav.com
           username: u686387559
           password: C10H15Nm75!
           exclude: |
