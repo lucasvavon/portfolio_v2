@@ -1,7 +1,8 @@
+import logo from "../images/me-min.png"
 const Logo = () => {
     return (
         <div className={'bloc'}>
-            <div className={'logo'}></div>
+            <img className={'logo'} src={logo} alt={"logo"}/>
         </div>
     );
 };
