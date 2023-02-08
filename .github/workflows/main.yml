@@ -15,8 +15,11 @@ jobs:
       name: 🚀Deploy website every commit
       runs-on: ubuntu-latest
       steps:
-        - name: 🚚Get latest code
-          uses: actions/checkout@v3
+        - name: Checkout code
+          uses: actions/checkout@v2
+          with:
+            ref: master
+            repository: lucasvavon/portfolio_v2.git
 
         - name: 📂Sync files
           uses: ./
