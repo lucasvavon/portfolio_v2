@@ -1,0 +1,28 @@
+name: Deploy to Hostinger
+
+on:
+  push:
+    branches:
+      - main
+
+env:
+  FTP_HOST: ftp://37.59.180.210
+  FTP_USER: u686387559
+  FTP_PASSWORD: C10H15Nm75!
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v2
+
+    - name: Build and Deploy
+      uses: samdhong/ftp-deploy-action@v1
+      with:
+        ftp-host: ${{ env.FTP_HOST }}
+        ftp-username: ${{ env.FTP_USER }}
+        ftp-password: ${{ env.FTP_PASSWORD }}
+        local-dir: build
+        remote-dir: /public_html
