@@ -3,7 +3,7 @@ name: Deploy to Hostinger
 on:
   push:
     branches:
-      - master
+      - main
 
 env:
   FTP_HOST: ftp://37.59.180.210
@@ -12,20 +12,20 @@ env:
 
 jobs:
   deploy:
-      name: 🚀Deploy website every commit
-      runs-on: ubuntu-latest
-      steps:
-        - name: Checkout code
-          uses: actions/checkout@v2
-          with:
-            ref: master
-            repository: lucasvavon/portfolio_v2.git
+    runs-on: ubuntu-latest
 
-        - name: 📂Sync files
-          uses: ./
-          with:
-            ftp-host: ${{ env.FTP_HOST }}
-            ftp-username: ${{ env.FTP_USER }}
-            ftp-password: ${{ env.FTP_PASSWORD }}
-            local-dir: build
-            remote-dir: /public_html
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+        with:
+          ref: main
+          repository: lucasvavon/portfolio_v2.git
+
+      - name: Build and Deploy
+        uses: samdhong/ftp-deploy-action@v1
+        with:
+          ftp-host: ${{ env.FTP_HOST }}
+          ftp-username: ${{ env.FTP_USER }}
+          ftp-password: ${{ env.FTP_PASSWORD }}
+          local-dir: build
+          remote-dir: /public_html
