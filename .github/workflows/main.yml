@@ -11,7 +11,7 @@ jobs:
       - name: ⌨️ Control code
         uses: JetBrains/qodana-action@main
         env:
-          QODANA_TOKEN: ${{ eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJvcmdhbml6YXRpb24iOiJBbXlqMCIsInByb2plY3QiOiJwUTZrRCIsInRva2VuIjoielowZUoifQ.YgtFuZTuDLc1rcMtt8hR8Uf3z3jfV9YUyOEF3-pgMSg }}
+          QODANA_TOKEN: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJvcmdhbml6YXRpb24iOiJBbXlqMCIsInByb2plY3QiOiJwUTZrRCIsInRva2VuIjoielowZUoifQ.YgtFuZTuDLc1rcMtt8hR8Uf3z3jfV9YUyOEF3-pgMSg
       - name: 📂 Sync files
         uses: SamKirkland/FTP-Deploy-Action@4.3.3
         with:
