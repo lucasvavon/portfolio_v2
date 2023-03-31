@@ -16,6 +16,6 @@ jobs:
         uses: SamKirkland/FTP-Deploy-Action@4.3.3
         with:
           server: 89.116.147.175
-          username: u686387559
-          password: C10H15Nm75!
+          username: u686387559.lucasvavon.com
+          password: 3KYu*dC4^5F&7xTh
           local-dir: build/
